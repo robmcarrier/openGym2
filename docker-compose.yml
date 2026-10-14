@@ -14,7 +14,7 @@ services:
       context: ./api
       target: ${API_TARGET:-default}
     restart: unless-stopped
-    env_file: .env
+    env_file: stack.env
     environment:
       # The port the API listens on. web proxies to this same value, so the two
       # cannot drift — change it in .env and both follow.
